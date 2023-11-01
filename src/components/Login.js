@@ -9,6 +9,7 @@ import { auth } from "../utils/firebase";
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
 import {USER_AVATAR} from '../utils/constants';
+import {BG_URL} from '../utils/constants';
 
 const Login = () => {
 
@@ -80,8 +81,7 @@ signInWithEmailAndPassword(auth, email.current.value,password.current.value)
     <div >
       <Header/>
       <div className='absolute'>
-      <img src="https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-       alt="bg-image"/>
+      <img src={BG_URL} alt="bg-image"/>
       
        </div>
        <div className="flex items-center justify-center min-h-screen">

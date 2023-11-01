@@ -10,14 +10,14 @@ const useMovieTrailer = (movieId) => {
         + movieId +
         "/videos?language=en-US", API_OPTIONS);
         const json = await data.json();
-        console.log(json);
+        
     
 
     const filterTrailers = json.results.filter((video)=>video.type==="Trailer");
     const trailer = filterTrailers.length?filterTrailers[0]:json.results[0];
     dispatch(addTrailerVideo(trailer));
     
-    console.log(trailer);
+
     }
 useEffect(()=>{
     getMovieVideos();
